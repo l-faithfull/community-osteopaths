@@ -1,10 +1,26 @@
 /***** BASE STYLES: generalised style info *****/
+html {
+    font-size: 16px;
+}
 
 body {
     color: #00264d;
     font-family: 'pt-sans', sans-serif;
-    font-size: 20px;
-    line-height: 33px;
+    font-size: 1em;
+    line-height: 2.0625;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+    padding: 60px 0;
+    max-width: 1200px;
+	width: 90%; /* means you don't need to set the margin */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 h1 {
@@ -14,16 +30,17 @@ h1 {
     text-decoration: overline, underline;
 }
 
-h2, h3 {
+h2, 
+h3 {
     color: #ff6600;
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 1.5625em;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 1em; /* previously 20px, as was body text */
 }
 
 h4 {
@@ -34,96 +51,80 @@ p {
     text-align: justify;
 }
 
-
-/***** GRID *****/
-
-.full-width {
-    margin: 0 auto;
-    overflow: auto;
-    width: 1200px;
-}
-
-.half-width {
-    float: left;
-    width: 600px;
-}
-
-.two-thirds-width {
-    float: left;
-    width: 800px;
-}
-
-.third-width {
-    float: left;
-    width: 400px;
+ul {
+	margin: 0;
 }
 
 
-/* HEADER */
-
-#header, #covid-header {
+/*------- HEADER ---------*/
+#header, 
+#covid-header {
     background: #d5e2e2;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
 }
 
-#header img, #covid-header img {
-    height: 300px;
-    padding: 100px 50px 100px 100px;
-    width: 250px;
+#header img, 
+#covid-header img {
+    padding-right: 50px;
+    width: 40%;
 }
 
 /* nav bar */
 nav {
-    float: right; 
-    padding: 175px 25px 175px 0;
+    padding: 25px 0;
 }
 
 nav ul {
-    padding-inline-start: 0;
+    margin: 0;
+	padding: 0;
 }
 
 nav ul li{
-    display: inline-block;
+    font-size: 1em;
+    padding: 10px 0; 
+    text-transform: uppercase;
+    list-style: none;
 }
 
 nav ul li a { 
     color: #ff6600;
-    font-size: 18px;
-    padding-left: 25px; 
-    text-decoration: none; /* this stops the links being automatically underlined */
-    text-transform: uppercase;
+    text-decoration: none; 
 }
 
-/* OSTEO */
-
-#osteo .full-width, #expectations .full-width, #about .full-width, #pre-screen .full-width, #visit .full-width, #end .full-width {
-    padding: 60px 0;
-}
-
-#osteo .third-width {
-    box-sizing: border-box;
-    padding-right: 30px;
+/*---------- OSTEO ---------*/
+#osteo .section-1,   /* START HERE ON 11/8 - why aren't the 2 sections aligned correctly??? */
+#osteo .section-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 
 /* EXPECTATIONS */
 
 #expectations .third-width img {
-    height: 600px;
-    width: 400px;
+    width: 33%;
 }
 
-#expectations, #visit { 
+#expectations, 
+#visit { 
     background: #d5e2e2;
 }
 
 
 /* ABOUT */
 
-#laura img, #sarah-img img { 
-    height: 400px;
+#laura img, 
+#sarah-img img { 
     margin-top: 70px;
     padding-left: 10px;
-    width: 300px;
+    width: 25%;
 }
 
 #sarah {
@@ -136,51 +137,68 @@ nav ul li a {
 #footer {
     background: #d5e2e2;
     padding: 110px 25px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Images */
-#cyclist img, #gosc img { 
-    height: 150px;
-    width: 200px;
+#cyclist img, 
+#gosc img { 
+    width: 33%;
 }
 
 /* Prices & Contact */
-#prices li, #contact li {
+#prices li, 
+#contact li {
     list-style-type: none;
 }
 
-#prices ul, #contact ul {
+#prices ul, 
+#contact ul {
     padding-inline-start: 0;
 }
 
-#prices h3, #contact h3 {
+#prices h3, 
+#contact h3 {
     padding-top: 50px; 
 }
 
 #contact li a { /* this stops the email link being blue & underlined */
     color: #00264d;
     font-family: 'pt-sans', sans-serif;
-    font-size: 20px;
-    line-height: 33px;
+    font-size: 1em;
+    line-height: 2.0625;
     text-decoration: none;
 }
 
 
 /* COVID-19 */
 
-#visit .half-width, #end .half-width {
+#visit .half-width, 
+#end .half-width {
     box-sizing: border-box;
     padding-right: 40px;
 }
 
 #extra {
-    clear: both;
     padding-top: 20px;
 }
 
 #ppe img {
-    height: 600px;
     padding-left: 50px;
     padding-top: 30px;
-    width: 300px;
+    width: 33%;
+}
+
+
+/* ------- TABLET --------- */
+@media all and (min-width: 768px) {
+
+}
+
+
+/* -------- DESKTOP ---------- */
+@media all and (min-width: 1200px) {
+
 }
