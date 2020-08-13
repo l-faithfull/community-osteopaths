@@ -1,4 +1,4 @@
-/***** BASE STYLES: generalised style info *****/
+/***** BASE STYLES *****/
 html {
     font-size: 16px;
 }
@@ -8,26 +8,15 @@ body {
     font-family: 'pt-sans', sans-serif;
     font-size: 1em;
     line-height: 2.0625;
+    text-align: justify;
     display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.container{
-    padding: 60px 0;
-    max-width: 1200px;
-	width: 90%; /* means you don't need to set the margin */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-}
-
-h1 {
-    font-weight: bold;
-    padding-bottom: 40px;
-    text-align: center;
-    text-decoration: overline, underline;
+.content-wrapper {
+    width: 90%;
+    margin: 50px 0;
 }
 
 h2, 
@@ -47,17 +36,13 @@ h4 {
     font-weight: bold;
 }
 
-p {
-    text-align: justify;
-}
-
 ul {
 	margin: 0;
 }
 
 
-/*------- HEADER ---------*/
-#header, 
+/*======= HEADER ========*/
+header, 
 #covid-header {
     background: #d5e2e2;
     width: 100%;
@@ -67,19 +52,29 @@ ul {
     flex-flow: row nowrap;
 }
 
-#header img, 
+header .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+header img, 
 #covid-header img {
     padding-right: 50px;
     width: 40%;
 }
 
-/* nav bar */
+/*------ nav bar -------- */
 nav {
-    padding: 25px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 20%;
 }
 
 nav ul {
-    margin: 0;
 	padding: 0;
 }
 
@@ -95,67 +90,39 @@ nav ul li a {
     text-decoration: none; 
 }
 
-/*---------- OSTEO ---------*/
-#osteo .section-1,   /* START HERE ON 11/8 - why aren't the 2 sections aligned correctly??? */
-#osteo .section-2 {
-    width: 100%;
+/*====== FOOTER =====*/
+footer { 
+    background: #d5e2e2;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-direction: column;
 }
 
-
-/* EXPECTATIONS */
-
-#expectations .third-width img {
-    width: 33%;
+footer .content-wrapper { 
+    width: 40%;
+    margin: 50px 0;
+  }
+  
+footer p {
+    margin: 0;
 }
 
-#expectations, 
-#visit { 
-    background: #d5e2e2;
+footer article {
+    margin-bottom: 60px;
 }
 
-
-/* ABOUT */
-
-#laura img, 
-#sarah-img img { 
-    margin-top: 70px;
-    padding-left: 10px;
-    width: 25%;
+/*---- Images ---- */
+.gosc img { 
+    width: 40%;
 }
 
-#sarah {
-    padding-top: 25px;
-}
-
-
-/* FOOTER */
-
-#footer {
-    background: #d5e2e2;
-    padding: 110px 25px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Images */
-#cyclist img, 
-#gosc img { 
-    width: 33%;
-}
-
-/* Prices & Contact */
-#prices li, 
-#contact li {
+/*---- Prices & Contact -----*/
+#prices li {
     list-style-type: none;
 }
 
-#prices ul, 
-#contact ul {
+#prices ul {
     padding-inline-start: 0;
 }
 
@@ -164,7 +131,8 @@ nav ul li a {
     padding-top: 50px; 
 }
 
-#contact li a { /* this stops the email link being blue & underlined */
+#prices li a,
+#contact address p a { 
     color: #00264d;
     font-family: 'pt-sans', sans-serif;
     font-size: 1em;
@@ -173,7 +141,77 @@ nav ul li a {
 }
 
 
-/* COVID-19 */
+/* ====== MOBILE- HOMEPAGE ===== */
+
+/*---- OSTEO ----*/
+#osteo,
+#expectations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+#osteo .content-wrapper,
+#expectations .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+#osteo article {
+    width: 50%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+
+/*----- EXPECTATIONS -----*/
+#expectations { 
+    background: #d5e2e2;
+}
+
+#expectations .content-image {
+    width: 33%;
+}
+
+#expectations .content-text {
+    width: 50%;
+}
+
+
+/*----- ABOUT -----*/
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+#about article {
+    margin: 50px 0;
+    width: 50%;
+}
+
+#about .content-image {
+    width: 30%;
+}
+
+
+/*========= COVID-19 ======== */
+#visit { 
+    background: #d5e2e2;
+}
 
 #visit .half-width, 
 #end .half-width {
