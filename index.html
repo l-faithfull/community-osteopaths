@@ -1,13 +1,18 @@
-<!-- FIRST ADD STRUCTURE: outside in & top to bottom -->
-<!-- THEN ADD CONTENT: including links & images -->
 <!doctype html>
 <html lang="en">
+    
     <head>
         <meta charset="utf-8">
         <title>Community Osteopaths | Home</title>
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <!-- Google fonts -->
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     </head>
 
     <body>
@@ -15,7 +20,10 @@
     
             <header> 
                 <div class="content-wrapper">
-                    <img src="img/logo.jpeg" alt="logo"/> <!-- comm ost logo -->
+                    <figure>
+                        <img src="img/logo.jpeg" alt="logo"/> <!-- comm ost logo -->
+                    </figure>
+                    <div class="header-divider"></div>
                     <nav>
                         <ul>
                             <li>
@@ -44,7 +52,7 @@
             <section id="osteo"> <!-- OSTEO HELPS/ABOUT -->
                 <div class="content-wrapper">
                     <article>
-                        <h2>Osteopathy can help with:</h2>
+                        <h1>Osteopathy can help with:</h1>
                         <ul>
                             <li>Acute/chronic neck or lower back pain</li>
                             <li>Sciatica</li>
@@ -60,7 +68,7 @@
                     </article> <!-- symptoms wrapper -->
 
                     <article>
-                        <h2>About Osteopathy</h2>
+                        <h1>About Osteopathy</h1>
                         <p>
                             To qualify, an osteopath must study for four to five years for an undergraduate degree.  
                             This is similar to a medical degree, with more emphasis on anatomy and musculoskeletal 
@@ -79,12 +87,12 @@
 
             <section id="expectations"> <!-- EXPECTATIONS/WHAT TO EXPECT -->
                 <div class="content-wrapper">
-                    <div class="content-image">
-                        <img src="img/golfer.png" alt="climber-icon"/> <!-- climber pic -->
-                    </div> <!-- image wrapper -->
+                    <figure class="content-image">
+                        <img src="img/climber.png" alt="climber-icon"/> <!-- climber pic -->
+                    </figure> <!-- image wrapper -->
                     
                     <div class="content-text">
-                        <h2>What can I expect?</h2>
+                        <h1>What can I expect?</h1>
                         <p>
                             Laura will go through a thorough medical history with you.  This will include questions 
                             in relation to your symptoms and your physical activities, as well as some questions 
@@ -121,12 +129,16 @@
 
             <section id="about"> <!-- ABOUT/ABOUT US -->
                 <div class="content-wrapper">
-                    <h2>A little bit about us</h2>
+                    <h1>A little bit about us</h1>
                     <article>
-                        <h4>Laura Faithfull, Registered Osteopath</h4>
-                        <div class="content-image">
-                            <img src="img/laura.jpg" alt="laura-running"/>
-                        </div> <!-- about image wrapper -->
+                        <div class="image-title">
+                            <figure class="content-image">
+                                <img src="img/laura.jpg" alt="laura-running"/>
+                            </figure> 
+                            <h3>Laura Faithfull<br>
+                                Registered Osteopath<br>
+                                MOst., BSc. (Hons.), DipSpM</h3>                            
+                        </div> <!-- image-title wrapper -->
                         
                         <div class="content-text">
                             <p><!-- my bio -->
@@ -149,10 +161,13 @@
                     </article> <!-- Laura wrapper -->
                     
                     <article>
-                        <h4>Sarah Emslie, Clinic Manager</h4>
-                        <div class="content-image">
-                            <img src="img/sarah.jpg" alt="sarah-cycling"/>
-                        </div> <!-- about-image wrapper -->
+                        <div class="image-title">
+                            <figure class="content-image">
+                                <img src="img/sarah.jpg" alt="sarah-cycling"/>
+                            </figure>
+                            <h3>Sarah Emslie<br>
+                                Clinic Manager, MOst.</h3>
+                        </div> <!-- image-title wrapper -->
 
                         <div class="content-text">
                             <p><!-- Sarah intel -->
@@ -177,7 +192,7 @@
                 <div class="content-wrapper">
                     <div class="footer-content">
                         <article id="prices"> <!-- PRICES -->
-                            <h3>Prices</h3>
+                            <h2>Prices</h2>
                             <ul>
                                 <li>Initial Consultation: £48</li>
                                 <li>30 minutes follow-up: £45</li>
@@ -187,18 +202,18 @@
                         </article>
                     
                         <article class="gosc"> <!-- GOsC logo stuff -->
-                            <div>
+                            <figure>
                                 <img src="img/cyclist.png" alt="cyclist"/>
-                            </div>
-                            <div>
+                            </figure>
+                            <figure>
                                 <a href="http://osteopathy.org.uk" target="_blank">
                                     <img src="img/registered.jpg" alt="gosc-registered"/>
                                 </a>
-                            </div>
+                            </figure>
                         </article>
                     
                         <article id="contact"> <!-- CONTACT -->
-                            <h3>Contact us</h3> 
+                            <h2>Contact us</h2> 
                             <address>
                                 <p>Edinburgh and East Lothian homevisits:<br>
                                    <a href="mailto:hello@communityosteopaths.co.uk">hello@communityosteopaths.co.uk</a><br>
@@ -208,6 +223,10 @@
                         </article> <!-- contact wrapper -->
                     </div> <!-- footer-content wrapper -->
                 </div> <!-- content wrapper ends -->
+
+                <div class="copyright">
+                    <p>Copyright 2020 | Community Osteopaths</p>
+                </div>
             </footer> <!-- footer ends -->
 
         </main>
