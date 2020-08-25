@@ -10,41 +10,57 @@ body {
     font-family: 'pt-sans', sans-serif;
     font-size: 1em;
     line-height: 2.0625; /* need for line height? */
-    text-align: justify;
+    text-align: left;
     display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-h1, 
-h2 {
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h2, 
+h3 {
     color: #ff6600;
 }
 
-h1 {
+h2 {
     font-size: 1.5625em;
 }
 
-h2 {
+h3 {
     font-size: 1em; /* previously 20px, as was body text */
 }
 
-h3 {
+h4 {
     font-weight: bold;
 }
 
 a {
     color: #00264d;
     text-decoration: none;
-  }
+}
 
 ul {
-	margin: 0;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
 }
 
 .content-wrapper {
     width: 90%;
     margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
 }
 
 img {
@@ -66,6 +82,7 @@ img {
 header, 
 #covid-header {
     background: #d5e2e2;
+    background-size: cover;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -106,25 +123,31 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 nav ul li{
     font-size: 1em;
     padding: 30px 25px 0 25px;
     text-transform: uppercase;
-    list-style: none;
 }
 
 nav ul li a { 
     color: #ff6600;
 }
 
+/* Header article */
+header article {
+    padding-top: 30px;
+}
+
+
 /*============================================
  FOOTER - MOBILE
 ==============================================*/
 footer { 
     background: #d5e2e2;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,10 +190,6 @@ footer .copyright {
     padding-top: 50px; 
 }
 
-#prices li {
-    list-style-type: none;
-}
-
 #prices ul {
     padding-inline-start: 0;
 }
@@ -186,26 +205,18 @@ footer .copyright {
 /* ===========================================
  HOMEPAGE - MOBILE
 ============================================== */
-
-/*---- OSTEO ----*/
 #osteo,
-#expectations {
+#expectations,
+#about {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
 }
 
-#osteo .content-wrapper,
-#expectations .content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-}
-
+/*---- OSTEO ----*/
 #osteo article {
-    width: 50%;
+    width: 49%;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
@@ -213,38 +224,29 @@ footer .copyright {
     flex-flow: row wrap;
 }
 
+#osteo ul li {
+    list-style-type: circle;
+}
 
 /*----- EXPECTATIONS -----*/
 #expectations { 
     background: #d5e2e2;
+    background-size: cover;
 }
 
 #expectations .content-image {
-    width: 33%;
+    width: 30%;
 }
 
 #expectations .content-text {
-    width: 50%;
+    width: 49%;
 }
 
 
 /*----- ABOUT -----*/
-#about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#about .content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-}
-
 #about article {
     margin: 50px 0;
-    width: 50%;
+    width: 49%;
 }
 
 #about .image-title {
@@ -267,34 +269,73 @@ footer .copyright {
 /*==========================================
  COVID-19 PAGE - MOBILE
 ============================================ */
+
+#pre-screen, 
+#visit, 
+#end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+#pre-screen article, 
+#visit article, 
+#end article {
+    width: 49%;
+    margin: 50px 0;
+}
+
+/*-------- PRE-SCREEN -------- */
+#pre-screen ul li {
+    list-style-type: circle;
+}
+
+/*----- VISIT -------- */
 #visit { 
     background: #d5e2e2;
+    background-size: cover;
 }
 
-#visit .half-width, 
-#end .half-width {
-    box-sizing: border-box;
-    padding-right: 40px;
+#visit .ppe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#extra {
-    padding-top: 20px;
+#visit figure {
+    padding: 20px 0;
+    width: 49%;
+    display: flex;
+    justify-content: center;
 }
 
-#ppe img {
-    padding-left: 50px;
-    padding-top: 30px;
-    width: 33%;
-}
-
+/*----- END ------ */
 
 
 @media all and (min-width: 768px) {  /* ------- TABLET --------- */
+/*=================================
+   General styles - Tablet
+  ===================================*/
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  
+
 
 } /* Tablet ends */
 
 
 
 @media all and (min-width: 1200px) {  /* -------- DESKTOP ---------- */
+    /* =========================
+   General styles - Desktop 
+  ============================*/
+  .content-wrapper {
+    max-width: 960px;
+  }  
+
 
 } /* Desktop ends */
