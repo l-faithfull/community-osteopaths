@@ -99,7 +99,7 @@ body {
     color: #00264d;
     font-family: 'pt-sans', sans-serif;
     font-size: 1em;
-    line-height: 2.0625; 
+    line-height: 1.285;
     text-align: left;
     display: flex;
   	justify-content: center;
@@ -107,10 +107,9 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.875em;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 20px;
 }
 
 h2, 
@@ -119,29 +118,29 @@ h3 {
 }
 
 h2 {
-    font-size: 1.5625em;
+    font-size: 1.875em;
 }
 
 h3 {
-    font-size: 1em; /* previously 20px, as was body text */
+  font-size: 1.125em; /* previously 20px, as was body text */
 }
 
 h4 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 a {
-    color: #00264d;
-    text-decoration: none;
+  color: #00264d;
+  text-decoration: none;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .content-wrapper {
@@ -154,32 +153,29 @@ li {
 }
 
 img {
-    width: 100%;
-  }
+  width: 100%;
+}
    
-  figure {
-    margin: 0;
-  }
+figure {
+  margin: 0;
+}
    
-  address {
-    font-style: normal;
-  }
+address {
+  font-style: normal;
+}
 
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: #d5e2e2;
+}
 
 /*======================================== 
  HEADER - MOBILE
 ==========================================*/
-header, 
-#covid-header {
-    background-color: #d5e2e2;
-    background-size: cover;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-}
-
 header .content-wrapper {
     display: flex;
     justify-content: center;
@@ -187,10 +183,13 @@ header .content-wrapper {
     flex-flow: row wrap;
 }
 
-header figure, 
-#covid-header figure {
+header figure {
     width: 40%;
     padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 .header-divider {
@@ -201,7 +200,7 @@ header figure,
   }
 
 /*------ nav bar -------- */
-nav {
+header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -209,21 +208,24 @@ nav {
     width: 100%;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li{
-    font-size: 1em;
+header nav ul li{
+    font-size: 1.125em;
     padding: 30px 25px 0 25px;
     text-transform: uppercase;
 }
 
-nav ul li a { 
-    color: #ff6600;
+header nav ul li a { 
+  color: #ff6600;
 }
 
 /* Header article */
@@ -236,11 +238,6 @@ header article {
  FOOTER - MOBILE
 ==============================================*/
 footer { 
-    background-color: #d5e2e2;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-flow: column nowrap;
     text-align: center;
 }
@@ -261,13 +258,17 @@ footer article {
     flex-flow: column wrap;
 }
 
+footer #contact p i {
+  font-size: 1.3125em;
+}
+
 footer .copyright {
     padding-bottom: 50px;
 }
 
 /*---- Images ---- */
 .gosc figure { 
-    width: 40%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,19 +276,8 @@ footer .copyright {
 }
 
 /*---- Prices & Contact -----*/
-#prices h2, 
-#contact h2 {
-    padding-top: 50px; 
-}
-
-#prices ul {
-    padding-inline-start: 0;
-}
-
-#prices li a,
-#contact address p a { 
-    font-family: 'pt-sans', sans-serif;
-    font-size: 1em;
+footer #prices ul li,
+footer #contact address p { 
     line-height: 2.0625;
 }
 
@@ -314,6 +304,14 @@ footer .copyright {
     flex-flow: row wrap;
 }
 
+#osteo .small {
+  flex-flow: column wrap;
+}
+
+#osteo ul {
+  padding-left: 10px;
+}
+
 #osteo ul li {
     list-style-type: disc;
 }
@@ -337,24 +335,24 @@ footer .copyright {
 #about article {
     margin: 50px 0;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
-#about .image-title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+#about article .content-title {
+  width: 52%;
+}
+
+#about article .content-image {
+  width: 48%;
 }
 
 #about figure {
-    padding-right: 20px;
-    width: 30%;
-    display: flex;
-    justify-content: center;
+  width: 30%;
 }
 
-#about .content-text {
-    padding-top: 20px;
-}
 
 /*==========================================
  COVID-19 PAGE - MOBILE
@@ -376,10 +374,19 @@ footer .copyright {
     margin: 50px 0;
 }
 
-/*-------- PRE-SCREEN -------- */
-#pre-screen ul li {
-    list-style-type: disc;
+#pre-screen ul,
+#visit ul,
+#end ul {
+  width: 80%;
+  padding-left: 20px;
 }
+
+#pre-screen ul li,
+#visit ul li,
+#end ul li {
+  padding-bottom: 10px;
+}
+
 
 /*----- VISIT -------- */
 #visit { 
@@ -404,12 +411,11 @@ footer .copyright {
 
 #visit figure {
     padding: 0;
-    width: 49%;
+    width: 40%;
     display: flex;
     justify-content: center;
 }
 
-/*----- END ------ */
 
 
 /* ==========================================================================
@@ -510,18 +516,108 @@ footer .copyright {
   }
 
   h2 {
-    font-size: 2.25em;
+    font-size: 2em;
     line-height: 1.333;
   }
 
   h3 {
-      font-size: 1.5em;
-      line-height: 1.25;
+      font-size: 1.25em;
   }
 
   body {
     font-size: 1.125em;
   }
+
+  /* =====================================
+   HEADER - TABLET
+  ======================================== */
+  header {
+    justify-content: space-around;
+  }
+
+  header .content-wrapper {
+    width: 90%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  header figure {
+    width: 35%;
+  }
+
+  header nav {
+    width: 60%;
+  }
+
+  header nav ul {
+    justify-content: space-around;
+  }
+
+  header article {
+    padding-left: 30px;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /* =================================
+   FOOTER - TABLET 
+  ==================================== */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+
+  footer #prices {
+    width: 39%;
+  }
+  
+  footer #contact {
+    width: 59%;
+  }
+
+
+  /* =================================
+   HOMEPAGE - TABLET
+  ==================================== */
+  
+  /* --------- Osteo - Expectations ---------- */
+  #osteo .content-wrapper, 
+  #expectations .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+
+  #osteo .small, 
+  #expectations .content-image {  
+    width: 33%;
+  }
+
+  #osteo .big, 
+  #expectations .content-text {
+    width: 60%;
+  }
+
+  /* ------ Expectations ---------- */
+  #expectations figure {
+    width: 30%;
+  }
+
+  #expectations h2 {
+    margin-top: 0;
+  }
+
+
+  /*==========================================
+   COVID-19 PAGE - TABLET
+  ============================================ */
+
+  
 
 } /* Tablet ends */
 
@@ -535,26 +631,33 @@ footer .copyright {
     max-width: 960px;
   }  
 
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+      font-size: 1.75em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.25em;
+  }
+
+  body {
+      font-size: 1.25em;
+      line-height: 1.5;
+  }
+
 
   /* ========================================
    HEADER - DESKTOP
   =========================================== */
-  header {
-    justify-content: space-around;
-  }
-
-  header .content-wrapper {
-    width: 100%;
-    justify-content: space-between;
-  }
-
   header figure {
-    width: 30%;
     padding: 0 30px 0 30px;
   }
 
   header nav {
-    width: 60%;
     padding-right: 20px;
   }
 
@@ -562,32 +665,43 @@ footer .copyright {
     justify-content: space-between;
   }
 
-  header article {
-    padding-left: 30px;
-  }
-
-  .header-divider {
-    display: none;
-  }
-
   /* =================================
-   HOMEPAGE - DESKTOP
+   FOOTER - DESKTOP
   ==================================== */
+  .footer-content {
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-flow: row wrap;
+    }
   
-  /* ---- Osteo --------- */
-  #osteo article {  /* WHY WON'T THESE SIT SIDE-BY-SIDE???? */
-    width: 49%;
+    footer #prices {
+      width: 39%;
+    }
+    
+    footer #contact {
+      width: 59%;
+    }
   }
-
-  /* ------ Expectations ------- */
-  #expectations .content-text {
-    width: 50%;
-  }
+  
+  
 
   /* ==============================
    COVID-19 - DESKTOP 
   =================================*/
   
+  /* -------- End -------- */
+  #end .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+
+  #end article {
+    width: 45%;
+  }  
 
 
 } /* Desktop ends */
