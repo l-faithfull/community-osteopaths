@@ -238,7 +238,6 @@ header article {
  FOOTER - MOBILE
 ==============================================*/
 footer { 
-    flex-flow: column nowrap;
     text-align: center;
 }
 
@@ -259,20 +258,17 @@ footer article {
 }
 
 footer #contact p i {
-  font-size: 1.3125em;
+  font-size: 1em;
 }
 
 footer .copyright {
     padding-bottom: 50px;
+    width: 100%;
 }
 
 /*---- Images ---- */
 .gosc figure { 
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
+    width: 20%;
 }
 
 /*---- Prices & Contact -----*/
@@ -396,10 +392,6 @@ footer #contact address p {
 
 #visit .intro {
   margin-bottom: 20px;
-}
-
-#visit .you-should {
-  margin-top: 0;
 }
 
 #visit .ppe {
@@ -561,25 +553,7 @@ footer #contact address p {
     display: none;
   }
 
-  /* =================================
-   FOOTER - TABLET 
-  ==================================== */
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-flow: row wrap;
-  }
-
-  footer #prices {
-    width: 39%;
-  }
   
-  footer #contact {
-    width: 59%;
-  }
-
-
   /* =================================
    HOMEPAGE - TABLET
   ==================================== */
@@ -617,7 +591,35 @@ footer #contact address p {
    COVID-19 PAGE - TABLET
   ============================================ */
 
+  /* ----- Visit ---- */
+  #visit .ppe-laura {
+    display: flex;
+    flex-flow: row nowrap;
+  }
   
+  #visit .ppe {
+    width: 30%;
+  } 
+
+  #visit figure {
+    width: 70%;
+  }
+  
+  #visit .laura-will {
+    width: 59%;
+  }
+  
+  /* ----- End ---------- */
+  #end .end-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+  }
+  
+  #end article {
+    width: 49%;
+  }
 
 } /* Tablet ends */
 
@@ -653,44 +655,77 @@ footer #contact address p {
   /* ========================================
    HEADER - DESKTOP
   =========================================== */
-  header figure {
-    padding: 0 30px 0 30px;
-  }
-
   header nav {
-    padding-right: 20px;
+    margin-top: 40px;
   }
 
   header nav ul {
     justify-content: space-between;
   }
 
+  
   /* =================================
    FOOTER - DESKTOP
   ==================================== */
-  .footer-content {
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-flow: row wrap;
-    }
-  
-    footer #prices {
-      width: 39%;
-    }
-    
-    footer #contact {
-      width: 59%;
-    }
+  .footer-content { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
   }
-  
-  
+    
+  footer #prices {
+    width: 25%;
+  }
+
+  footer .gosc {
+    width: 40%;
+  }
+
+  footer .gosc figure {
+    width: 35%;
+  }
+
+  footer #contact {
+    width: 35%;
+  }
+
+
 
   /* ==============================
    COVID-19 - DESKTOP 
   =================================*/
   
+  /* --------- Visit ------- */
+  #visit .visit-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+  }
+
+  #visit .you-should {
+    width: 49%;
+  }
+
+  #visit .ppe-laura {
+    width: 49%;
+    align-items: flex-start;
+  }
+
+  #visit .ppe {
+    margin-top: 140px;
+    width: 39%;
+  }
+
+  #visit figure {
+    width: 85%;
+  }
+
+  #visit .laura-will {
+    width: 59%;
+  }
+
   /* -------- End -------- */
   #end .content-wrapper {
     display: flex;
