@@ -354,6 +354,7 @@ footer #contact address p {
  COVID-19 PAGE - MOBILE
 ============================================ */
 
+#videos,
 #pre-screen, 
 #visit, 
 #end {
@@ -363,6 +364,7 @@ footer #contact address p {
     flex-flow: row wrap;
 }
 
+#videos article,
 #pre-screen article, 
 #visit article, 
 #end article {
@@ -370,6 +372,7 @@ footer #contact address p {
     margin: 50px 0;
 }
 
+#videos ul,
 #pre-screen ul,
 #visit ul,
 #end ul {
@@ -377,6 +380,7 @@ footer #contact address p {
   padding-left: 20px;
 }
 
+#videos ul li,
 #pre-screen ul li,
 #visit ul li,
 #end ul li {
@@ -408,6 +412,11 @@ footer #contact address p {
     justify-content: center;
 }
 
+/* ---------- VIDEOS ------------ */
+#videos h2 {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
 
 
 /* ==========================================================================
@@ -609,7 +618,8 @@ footer #contact address p {
     width: 59%;
   }
   
-  /* ----- End ---------- */
+  /* ----- End & Videos---------- */
+  #videos .videos-content,
   #end .end-content {
     display: flex;
     justify-content: space-between;
@@ -617,6 +627,7 @@ footer #contact address p {
     flex-flow: row nowrap;
   }
   
+  #videos article,
   #end article {
     width: 49%;
   }
