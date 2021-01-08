@@ -632,6 +632,12 @@ footer #contact address p {
     width: 49%;
   }
 
+  #videos .videos-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 } /* Tablet ends */
 
 
