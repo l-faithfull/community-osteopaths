@@ -101,9 +101,6 @@ body {
     font-size: 1em;
     line-height: 1.285;
     text-align: left;
-    display: flex;
-  	justify-content: center;
-	  align-items: center;
 }
 
 h1 {
