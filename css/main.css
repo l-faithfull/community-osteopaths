@@ -351,6 +351,7 @@ footer #contact address p {
  COVID-19 PAGE - MOBILE
 ============================================ */
 
+#general-intro,
 #videos,
 #pre-screen, 
 #visit, 
@@ -361,12 +362,20 @@ footer #contact address p {
     flex-flow: row wrap;
 }
 
+.general-intro-content,
 #videos article,
 #pre-screen article, 
 #visit article, 
 #end article {
     width: 100%;
     margin: 50px 0;
+}
+
+#pre-screen h2,
+#visit h2,
+#end h2 {
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 #videos ul,
@@ -382,6 +391,18 @@ footer #contact address p {
 #visit ul li,
 #end ul li {
   padding-bottom: 10px;
+}
+
+
+/* ---------- VIDEOS ------------ */
+#videos h2 {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+#videos { 
+  background: #d5e2e2;
+  background-size: cover;
 }
 
 
@@ -407,12 +428,6 @@ footer #contact address p {
     width: 40%;
     display: flex;
     justify-content: center;
-}
-
-/* ---------- VIDEOS ------------ */
-#videos h2 {
-  margin-top: 50px;
-  margin-bottom: 0px;
 }
 
 
