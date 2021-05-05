@@ -391,6 +391,10 @@ footer #contact a:hover {
     flex-flow: row wrap;
 }
 
+#general-intro .content-wrapper {
+  margin-bottom: 0;
+}
+
 .general-intro-content,
 #videos article,
 #pre-screen article, 
