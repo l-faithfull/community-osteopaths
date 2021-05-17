@@ -201,9 +201,25 @@ header .content-wrapper {
     flex-flow: row wrap;
 }
 
+/* Homepage sticky covid banner */
+.sticky-covid-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ff6600;
+}
+
+.sticky-covid-banner p {
+  text-align: center;
+}
+
+.sticky-covid-banner a {
+  color: white;
+}
+
 header figure {
     width: 40%;
-    padding-bottom: 40px;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;

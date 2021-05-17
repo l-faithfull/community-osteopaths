@@ -1,3 +1,6 @@
+/************************
+ * scrollToTopBtn
+ *  ********************/
 //get button 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
